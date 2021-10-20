@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:background="#00ffff"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        android:layout_margin="16dp"
+        android:padding="8dp"
+        android:gravity="center"
+        android:id="@+id/tvMsg"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:text="DEIS - Pedro Gonçalo dos Reis Correia =>"
+        android:maxLines="1"
+        android:textStyle="italic|bold"
+        android:fontFamily="@font/firacode"
+        app:autoSizeMaxTextSize="48sp"
+        app:autoSizeMinTextSize="12sp"
+        app:autoSizeTextType="uniform" />
+
+    <Button
+        android:id="@+id/btn1"
+        android:layout_margin="16dp"
+        android:padding="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Botão 1" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffe0"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn2"
+            android:layout_margin="16dp"
+            android:padding="16dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Botão 2" />
+
+
+        <Button
+            android:id="@+id/btn3"
+            android:layout_margin="16dp"
+            android:padding="16dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Botão 3" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffb040"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn4"
+            android:layout_margin="16dp"
+            android:padding="16dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Botão 4" />
+
+
+        <Button
+            android:id="@+id/btn5"
+            android:layout_margin="16dp"
+            android:padding="16dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Botão 5"
+            android:onClick="onBotao5"/>
+
+    </LinearLayout>
+
+
+</LinearLayout>
