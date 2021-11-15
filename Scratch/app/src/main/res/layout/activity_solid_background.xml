@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.SolidBackgroundActivity"
+    android:orientation="vertical"
+    android:background="@color/cor_l1"
+    android:padding="8dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Title:"
+        android:textSize="20sp"
+        android:textColor="@color/cor_c1"/>
+    <EditText
+        android:id="@+id/edTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="monospace"
+        android:hint="Provide the title"
+        android:maxLines="1"
+        android:maxEms="30"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/cor_n1"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Background color:"
+            android:textSize="20sp"
+            android:textColor="@color/cor_c1"/>
+
+        <LinearLayout
+            android:layout_margin="4dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="R:"
+                android:textSize="20sp"
+                android:textColor="#FF0000"/>
+            <SeekBar
+                android:id="@+id/seekRed"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:progress="75"
+                android:thumbTint="#FF0000"
+                android:progressTint="#FF0000"
+                android:layout_gravity="center_vertical"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_margin="4dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="G:"
+                android:textSize="20sp"
+                android:textColor="#00FF00"/>
+            <SeekBar
+                android:id="@+id/seekGreen"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:progress="50"
+                android:thumbTint="#00FF00"
+                android:progressTint="#00FF00"
+                android:layout_gravity="center_vertical"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_margin="4dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="B:"
+                android:textSize="20sp"
+                android:textColor="#0000FF"/>
+            <SeekBar
+                android:id="@+id/seekBlue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:progress="25"
+                android:thumbTint="#0000FF"
+                android:progressTint="#0000FF"
+                android:layout_gravity="center_vertical"/>
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/frPreview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/cor_d1"
+            android:layout_margin="4dp"/>
+
+    </LinearLayout>
+</LinearLayout>

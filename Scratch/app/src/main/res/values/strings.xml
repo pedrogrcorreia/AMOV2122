@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Scratch@AMov</string>
+    <string name="text_scratch">Scratch</string>
+    <string name="btn_solid_background">Solid Background</string>
+    <string name="btn_gallery_image">Gallery Image</string>
+    <string name="btn_photography">Photography</string>
+    <string name="btn_history">History</string>
+    <string name="msg_soon">Available soon</string>
+</resources>
