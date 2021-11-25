@@ -34,11 +34,17 @@ class DrawAreaActivity : AppCompatActivity() {
 
         val title = intent.getStringExtra(TITLE_PARAM) ?: "No name"
 
-        val r = intent.getIntExtra(RED_PARAM, 255)
-        val g = intent.getIntExtra(GREEN_PARAM, 255)
-        val b = intent.getIntExtra(BLUE_PARAM, 255)
+        if(intent.hasExtra(IMAGE_PARAM)){
+            val imagePath = intent.getStringExtra(IMAGE_PARAM)
+            scratch = Scratch(title, bkgImage = imagePath)
+        }else {
+            val r = intent.getIntExtra(RED_PARAM, 255)
+            val g = intent.getIntExtra(GREEN_PARAM, 255)
+            val b = intent.getIntExtra(BLUE_PARAM, 255)
 
-        scratch = Scratch(title, bkgColor = Color.rgb(r, g, b))
+            scratch = Scratch(title, bkgColor = Color.rgb(r, g, b))
+        }
+
 
         supportActionBar?.title = "Scratch: " + title
 

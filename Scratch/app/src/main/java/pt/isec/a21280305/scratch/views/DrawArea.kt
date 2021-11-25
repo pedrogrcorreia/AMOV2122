@@ -12,6 +12,7 @@ import android.view.MotionEvent
 import android.view.View
 import pt.isec.a21280305.scratch.model.Line
 import pt.isec.a21280305.scratch.model.Scratch
+import pt.isec.a21280305.scratch.utils.ImageUtils
 
 const val TAG = "DrawArea"
 
@@ -31,6 +32,9 @@ class DrawArea(context: Context) : View(context), GestureDetector.OnGestureListe
     constructor(context: Context, scratch: Scratch) : this(context){
         this.scratch = scratch
         setBackgroundColor(scratch.bkgColor)
+        scratch.bkgImage?.run {
+            ImageUtils.setPic(this@DrawArea, this)
+        }
     }
 
     private val paint = Paint(Paint.DITHER_FLAG or Paint.ANTI_ALIAS_FLAG).apply{
@@ -101,5 +105,12 @@ class DrawArea(context: Context) : View(context), GestureDetector.OnGestureListe
     ): Boolean {
         Log.i(TAG,"onFling: ${e2!!.x} ${e2!!.y}")
         return false
+    }
+
+    override fun onSizeChanged(w: Int, h: Int, oldw: Int, oldh: Int) {
+        super.onSizeChanged(w, h, oldw, oldh)
+        scratch.bkgImage?.run {
+            ImageUtils.setPic(this@DrawArea, this)
+        }
     }
 }
