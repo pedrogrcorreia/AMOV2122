@@ -1,15 +1,13 @@
 package pt.isec.a21280305.scratch.views
 
 import android.content.Context
-import android.graphics.Canvas
-import android.graphics.Color
+import android.graphics.*
 
-import android.graphics.Paint
-import android.graphics.Path
 import android.util.Log
 import android.view.GestureDetector
 import android.view.MotionEvent
 import android.view.View
+import androidx.core.view.drawToBitmap
 import pt.isec.a21280305.scratch.model.Line
 import pt.isec.a21280305.scratch.model.Scratch
 import pt.isec.a21280305.scratch.utils.ImageUtils
@@ -48,6 +46,9 @@ class DrawArea(context: Context) : View(context), GestureDetector.OnGestureListe
             field = value
             scratch.addLine(value)
         }
+
+    val preview : Bitmap
+        get() = this.drawToBitmap()
 
     private val gestureDetector : GestureDetector by lazy { GestureDetector(context, this) }
 

@@ -9,6 +9,7 @@ import android.widget.FrameLayout
 import pt.isec.a21280305.scratch.R
 import pt.isec.a21280305.scratch.databinding.ActivityDrawAreaBinding
 import pt.isec.a21280305.scratch.model.Scratch
+import pt.isec.a21280305.scratch.model.Scratches
 import pt.isec.a21280305.scratch.views.DrawArea
 
 class DrawAreaActivity : AppCompatActivity() {
@@ -71,6 +72,8 @@ class DrawAreaActivity : AppCompatActivity() {
             else -> {
                 when (item.itemId){
                     R.id.mnSave -> {
+                        scratch.preview = drawArea.preview
+                        Scratches.list.add(scratch)
                         finish()
                     }
                     else -> {

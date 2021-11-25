@@ -13,9 +13,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Scratch">
         <activity
-            android:name=".activities.ImageBackgroundActivity"
+            android:name=".activities.HistoryActivity"
             android:exported="false"
             android:parentActivityName=".activities.MainActivity"/>
+        <activity
+            android:name=".activities.ImageBackgroundActivity"
+            android:exported="false"
+            android:parentActivityName=".activities.MainActivity" />
         <activity
             android:name=".activities.DrawAreaActivity"
             android:exported="false"
@@ -37,7 +41,8 @@
         <provider
             android:name="androidx.core.content.FileProvider"
             android:authorities="pt.isec.a21280305.scratch.android.fileprovider"
-            android:exported="false" android:grantUriPermissions="true">
+            android:exported="false"
+            android:grantUriPermissions="true">
             <meta-data
                 android:name="android.support.FILE_PROVIDER_PATHS"
                 android:resource="@xml/file_paths" />

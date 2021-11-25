@@ -29,6 +29,7 @@ class MainActivity : AppCompatActivity() {
         startActivity(intent)
     }
     fun onHistory(view: android.view.View) {
-        Snackbar.make(view, R.string.msg_soon, Snackbar.LENGTH_LONG).show()
+        //Snackbar.make(view, R.string.msg_soon, Snackbar.LENGTH_LONG).show()
+        startActivity(Intent(this, HistoryActivity::class.java))
     }
 }
